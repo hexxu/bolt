@@ -11,4 +11,4 @@
     - Also plotted the clusterings for k=4 and k=2 in [clustering.png](./clean_data.py) and [clustering_k_2.png](./clustering_k_2.png), respectively
 
 ## Additional Notes
-To data for the clusterings is not 2D, therefore it's not possible to plot the clusters with the original structure. Instead, have to use 2D approximation, and so the clustering plots do not encompass the full structure of the data.
+Data for the clusterings is not 2D, therefore it's not possible to plot the clusters with the original structure. Instead, have to use 2D approximation, and so the clustering plots do not encompass the full structure of the data.
