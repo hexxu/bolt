@@ -33,7 +33,7 @@ plt.xlabel('Principal Component 1')
 plt.ylabel('Principal Component 2')
 plt.legend()
 plt.grid(True)
-plt.savefig('clustering1.png')
+plt.savefig('clustering.png')
 
 
 
