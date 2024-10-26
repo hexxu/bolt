@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
-df = pd.read_csv('flexfield_fitness.csv')
+df = pd.read_csv('./data/flexfield_fitness.csv')
 
 # Drop rows where 'Calorie Intake' and 'Hours at Gym (per week)' missing
 df = df.dropna(subset=['Calorie Intake', 'Hours at Gym (per week)'])
@@ -15,7 +15,7 @@ scaler = StandardScaler()
 df_cleaned[continuous_features] = scaler.fit_transform(df_cleaned[continuous_features])
 
 # Save cleaned data to file
-df_cleaned.to_csv('./flexfield_fitness_cleaned.csv', index=False)
+df_cleaned.to_csv('./data/flexfield_fitness_cleaned.csv', index=False)
 
 print("Data has been processed and saved to 'flexfield_fitness_cleaned.csv'")
 

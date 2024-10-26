@@ -3,7 +3,7 @@ from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 
-df = pd.read_csv('flexfield_fitness_cleaned.csv')
+df = pd.read_csv('./data/flexfield_fitness_cleaned.csv')
 
 # Get rid of 'Customer ID', don't want to include in clustering analysis
 features = df.drop(columns=['Customer ID'])
@@ -17,7 +17,7 @@ kmeans.fit(features)
 # Add cluster labels to data
 df['Cluster'] = kmeans.labels_
 
-df.to_csv('./flexfield_fitness_with_clusters.csv', index=False)
+df.to_csv('./data/flexfield_fitness_with_clusters.csv', index=False)
 
 # Perform PCA for 2D visualization
 pca = PCA(n_components=2)
@@ -36,7 +36,7 @@ plt.xlabel('Principal Component 1')
 plt.ylabel('Principal Component 2')
 plt.legend()
 plt.grid(True)
-plt.savefig('clustering.png')
+plt.savefig('./figs/clustering.png')
 
 
 
