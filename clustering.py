@@ -5,13 +5,16 @@ from sklearn.decomposition import PCA
 
 df = pd.read_csv('flexfield_fitness_cleaned.csv')
 
+# Get rid of 'Customer ID', don't want to include in clustering analysis
 features = df.drop(columns=['Customer ID'])
 
+# Set number of clusters to 4
 k = 4
 
 kmeans = KMeans(n_clusters=k, random_state=0)
 kmeans.fit(features)
 
+# Add cluster labels to data
 df['Cluster'] = kmeans.labels_
 
 df.to_csv('./flexfield_fitness_with_clusters.csv', index=False)
