@@ -1,0 +1,1 @@
+**Case context:** Case competition project focused on helping a fitness company identify the most strategically aligned partnership by analyzing customer overlap and behavior across multiple potential partners.
